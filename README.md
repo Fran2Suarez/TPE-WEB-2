@@ -23,4 +23,4 @@ Descripcion de la tematica:
 Es una pagina que brinda informacion de videojuegos.
 
 ****
-![Diagrama](Diagrama.png)
+![Diagrama](diagrama.png)
