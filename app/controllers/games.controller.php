@@ -13,4 +13,8 @@ class GamesController {
         $games = $this->model->getGames();
         return $this->view->showHome($games);
     }
+    public function showGame($id){
+        $game = $this->model->getGameById($id);
+        return $this->view->showGame($game);
+    }
 }

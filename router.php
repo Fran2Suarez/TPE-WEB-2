@@ -23,6 +23,10 @@ switch ($params[0]) {
         $controller = new GamesController();
         $controller->showHome();
         break;
+    case "game":
+        $controller = new GamesController();
+        $controller->showGame($params[1]);
+        break;
     default:
         echo "Error 404 Page Not Found";
         break;

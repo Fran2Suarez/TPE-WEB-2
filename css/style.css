@@ -1,21 +1,25 @@
-body{
+.custom-bg{
     background-color: #0a0a0a;
     color: white;
 }
-.categories{
-    border-radius: 1rem;
-    border: 5px solid#5a5a5a;
-    width: 30%;
+.header{
+    background-color: #a789f9;
 }
 .games{
-    border: 5px solid#5a5a5a;
+    border-top: 5px solid#242424;
+}
+.custom-page{
     border-radius: 1rem;
-} 
+    background-color: #242424;
+}
 .game-img{
     border-radius: 1rem;
     margin: 1rem;
     width: 50%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.custom-size{
+    height: 15rem;
 }
