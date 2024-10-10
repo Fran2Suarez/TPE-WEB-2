@@ -2,6 +2,9 @@
     background-color: #0a0a0a;
     color: white;
 }
+a{
+    text-decoration: none;
+}
 .header{
     background-color: #a789f9;
 }
