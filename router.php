@@ -1,7 +1,6 @@
 <?php
 require_once "app/controllers/games.controller.php";
 
-
 define('BASE_URL', '//'.$_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] . dirname($_SERVER['PHP_SELF']).'/');
 
 if (!empty($_GET["action"])){
@@ -10,7 +9,6 @@ if (!empty($_GET["action"])){
     $action = "home";
 }
 
-//**
 //    TABLA DE RUTEO
 //    Action        Funcion
 //    home          showHome()
