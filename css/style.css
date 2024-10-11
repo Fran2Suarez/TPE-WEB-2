@@ -8,12 +8,19 @@ a{
 .header{
     background-color: #a789f9;
 }
+
+.login-footer {
+    background-color: white;
+    border-radius: 5px;
+    border-color: black;
+}
+
 .games{
     border-top: 5px solid#242424;
 }
 .custom-page{
     border-radius: 1rem;
-    background-color: #242424;
+    background-color: #361414;
 }
 .game-img{
     border-radius: 1rem;
@@ -25,4 +32,37 @@ a{
 }
 .custom-size{
     height: 15rem;
+}
+
+/* FOOTER */
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #a789f9;
+    color: white;
+    text-align: center;
+    padding: 5px;
+}
+
+/* LOGIN */
+.body-login{
+    align-items: center;
+}
+.div-login {
+    background-color: #0a0a0a;
+    display: flex;
+    justify-content: center;
+}
+.form-control {
+    border-color: #a789f9;
+    border-radius: 5px;
+}
+.form-label{
+    color: white;
+}
+.form-check-label{
+    color: white;
 }

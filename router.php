@@ -1,5 +1,6 @@
 <?php
 require_once "app/controllers/games.controller.php";
+require_once "app/controllers/auth.controller.php";
 
 define('BASE_URL', '//'.$_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] . dirname($_SERVER['PHP_SELF']).'/');
 
@@ -24,6 +25,10 @@ switch ($params[0]) {
     case "game":
         $controller = new GamesController();
         $controller->showGame($params[1]);
+        break;
+    case "login":
+        $controller = new AuthController();
+        $controller->showLogin(); 
         break;
     default:
         echo "Error 404 Page Not Found";
