@@ -1,6 +1,6 @@
 <?php
 class AuthView {
-    public function showLogin(){
+    public function showLogin($error = ''){
         require 'templates/login.phtml';
     }
 }

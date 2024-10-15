@@ -1,8 +1,12 @@
 <?php
 require_once "app/controllers/games.controller.php";
 require_once "app/controllers/auth.controller.php";
+require_once "app/middleware/session.auth.middleware.php";
+require_once "libs/response.php";
 
 define('BASE_URL', '//'.$_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] . dirname($_SERVER['PHP_SELF']).'/');
+
+$res = new Response();
 
 if (!empty($_GET["action"])){
     $action = $_GET["action"];
@@ -19,16 +23,31 @@ $params = explode("/",$action);
 
 switch ($params[0]) {
     case "home":
-        $controller = new GamesController();
-        $controller->showHome();
+        sessionAuthMiddleware($res);
+        $controller = new GamesController($res);
+        if (empty ($params[1])) {
+            $controller->showHome();
+        }
+        else {
+            $controller->showGenres($params[1]);
+        }
         break;
     case "game":
-        $controller = new GamesController();
+        sessionAuthMiddleware($res);
+        $controller = new GamesController($res);
         $controller->showGame($params[1]);
+        break;
+    case "showLogin":
+        $controller = new AuthController();
+        $controller->showLogin(); 
         break;
     case "login":
         $controller = new AuthController();
-        $controller->showLogin(); 
+        $controller->login(); 
+        break;
+    case "logout":
+        $controller = new AuthController();
+        $controller->logout(); 
         break;
     default:
         echo "Error 404 Page Not Found";
