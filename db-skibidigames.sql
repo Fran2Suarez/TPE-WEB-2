@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 16-10-2024 a las 00:01:14
+-- Tiempo de generación: 16-10-2024 a las 22:02:08
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -89,7 +89,6 @@ INSERT INTO `genre` (`id_genre`, `genre_name`) VALUES
 -- Estructura de tabla para la tabla `users`
 --
 -- Creación: 15-10-2024 a las 20:44:39
--- Última actualización: 15-10-2024 a las 21:56:37
 --
 
 CREATE TABLE `users` (
