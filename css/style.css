@@ -1,4 +1,10 @@
 /* MAIN BODY */
+.body-all {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 .custom-bg{
     background-color: #0a0a0a;
     color: white;
@@ -36,16 +42,16 @@
 }
 
 /* FOOTER */
-.login-footer {
-    background-color: white;
-    border-radius: 5px;
-    border-color: black;
+footer {
+    margin-top: auto;
 }
 
 /* LOGIN */
 .body-login{
-    align-items: center;
     background-color: #0a0a0a;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 .div-login {
     display: flex;
