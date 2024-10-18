@@ -9,6 +9,14 @@
             <a href="home" class="text-decoration-none text-white"><h5>Todos</h5></a>
             <?php foreach ($genre as $genre): ?>
                 <a href="home/<?php echo $genre->id_genre?>" class="text-decoration-none text-white"><h5><?php echo $genre->genre_name?></h5></a>
+                <div class="category-container">
+                    <?php if($this->user): ?>
+                    <div>
+                        <a href="showEditGenre/<?php echo $genre->id_genre?>"><img class="categoryIcon text-start" src="editarIcono.png" alt=""></a>
+                        <a href=""><img class="categoryIcon text-start" src="eliminarIcono.png" alt=""></a>
+                    </div>
+                    <?php endif ?>
+                </div>
             <?php endforeach ?>
         </div>
     </div>
@@ -22,10 +30,12 @@
                     <h4><?php echo $game->title?></h4>
                     </a>
                     <p><?php echo $game->genre_name?></p>
+                    <?php if($this->user): ?>
                     <div class="d-flex justify-content-center gap-2 p-2">
-                        <a href="edit/<?php echo $game->id?>" class="btn btn-success">Editar</a>
+                        <a href="showEditGame/<?php echo $game->id?>" class="btn btn-success">Editar</a>
                         <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#confirmDeleteModal<?php echo $game->id; ?>">Eliminar</button>
                     </div>
+                    <?php endif ?>
                 </div>
 
                 <!-- Modal de confirmación -->
@@ -52,10 +62,12 @@
         </div>
     </div>
     <!-- Botones para agregar juegos y categorías, alineados a la derecha -->
+        <?php if($this->user): ?>
         <div class="text-end p-2 ">
-            <a href="add-game" class="btn btn-success">Agregar Juego</a>
-            <a href="add-category" class="btn btn-success">Agregar Categoría</a>
+            <a href="showAddGame" class="btn btn-success">Agregar Juego</a>
+            <a href="showAddGenre" class="btn btn-success">Agregar Categoría</a>
         </div>
+        <?php endif ?>
 </body>
 
 <?php require 'templates/layout/footer.phtml';?>

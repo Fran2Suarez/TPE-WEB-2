@@ -1,6 +1,7 @@
 <?php
 require_once "app/controllers/games.controller.php";
 require_once "app/controllers/auth.controller.php";
+require_once "app/controllers/genres.controller.php";
 require_once "app/middleware/session.auth.middleware.php";
 require_once "libs/response.php";
 
@@ -48,6 +49,22 @@ switch ($params[0]) {
     case "logout":
         $controller = new AuthController();
         $controller->logout(); 
+        break;
+    case "showAddGame":
+        $controller = new GamesController($res);
+        $controller->showAddGame();
+        break;
+    case "showAddGenre":
+        $controller = new GenresController($res);
+        $controller->showAddGenre();
+        break;
+    case "showEditGame":
+        $controller = new GamesController($res);
+        $controller->showEditGame($params[1]);
+        break;
+    case "showEditGenre":
+        $controller = new GenresController($res);
+        $controller->showEditGenre($params[1]);
         break;
     default:
         echo "Error 404 Page Not Found";

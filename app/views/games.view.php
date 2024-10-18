@@ -10,4 +10,10 @@ class GamesView {
     public function showGame($game){
         require 'templates/game.phtml';
     }
+    public function showAddGame(){
+        require 'templates/add-game.phtml';
+    }
+    public function showEditGame($game){
+        require 'templates/edit-game.phtml';
+    }
 }

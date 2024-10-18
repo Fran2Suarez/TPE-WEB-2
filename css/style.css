@@ -83,3 +83,9 @@ footer {
     border-radius: .5rem;
     padding: .5rem;
 }
+
+.categoryIcon {
+    width: 20px;
+    gap: 1rem;
+    margin-bottom: 10px;
+}

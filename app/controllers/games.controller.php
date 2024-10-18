@@ -26,5 +26,11 @@ class GamesController {
         $genre = $this->modelGenre->getGenres();
         return $this->view->showHome($genre, $games);
     }
-
+    public function showAddGame() {
+        return $this->view->showAddGame();
+    }
+    public function showEditGame($id) {
+        $game = $this->model->getGameById($id);
+        return $this->view->showEditGame($game);
+    }
 }
