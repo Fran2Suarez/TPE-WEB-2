@@ -6,10 +6,10 @@ class GenresView {
         $this->user = $user;
     }
 
-    public function showAddGenre(){
-        require 'templates/add-game.phtml';
+    public function showAddGenre($error = ''){
+        require 'templates/add-genre.phtml';
     }
-    public function showEditGenre($genre){
+    public function showEditGenre($genre, $error = ''){
         require 'templates/edit-genre.phtml';
     }
 }

@@ -51,18 +51,46 @@ switch ($params[0]) {
         $controller->logout(); 
         break;
     case "showAddGame":
+        sessionAuthMiddleware($res);
         $controller = new GamesController($res);
         $controller->showAddGame();
         break;
+    case "addGame":
+        $controller = new GamesController($res);
+        $controller->addGame();
+        break;
+    case "deleteGame":
+        $controller = new GamesController($res);
+        $controller->deleteGame($params[1]);
+        break;
+    case "editGame":
+        $controller = new GamesController($res);
+        $controller->editGame($params[1]);
+        break;
     case "showAddGenre":
+        sessionAuthMiddleware($res);
         $controller = new GenresController($res);
         $controller->showAddGenre();
         break;
+    case "addGenre":
+        $controller = new GenresController($res);
+        $controller->addGenre();
+        break;
+    case "deleteGenre":
+        $controller = new GamesController($res);
+        $controller->deleteGenre($params[1]);
+        break;
+    case "editGenre":
+        $controller = new GenresController($res);
+        $controller->editGenre($params[1]);
+        break;
     case "showEditGame":
+        sessionAuthMiddleware($res);
         $controller = new GamesController($res);
         $controller->showEditGame($params[1]);
         break;
     case "showEditGenre":
+        sessionAuthMiddleware($res);
         $controller = new GenresController($res);
         $controller->showEditGenre($params[1]);
         break;

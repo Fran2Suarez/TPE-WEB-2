@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 16-10-2024 a las 22:02:08
+-- Tiempo de generación: 20-10-2024 a las 03:14:41
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -26,14 +26,14 @@ SET time_zone = "+00:00";
 --
 -- Estructura de tabla para la tabla `games`
 --
--- Creación: 15-10-2024 a las 20:13:56
+-- Creación: 20-10-2024 a las 00:12:23
+-- Última actualización: 20-10-2024 a las 01:13:41
 --
 
 CREATE TABLE `games` (
   `id` int(11) NOT NULL,
   `title` varchar(255) NOT NULL,
   `description` text NOT NULL,
-  `release-date` date NOT NULL,
   `id_genre` int(11) NOT NULL,
   `image` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -48,20 +48,21 @@ CREATE TABLE `games` (
 -- Volcado de datos para la tabla `games`
 --
 
-INSERT INTO `games` (`id`, `title`, `description`, `release-date`, `id_genre`, `image`) VALUES
-(2, 'Dragon Ball: Sparking Zero', 'DRAGON BALL: Sparking! ZERO lleva a un nuevo nivel el legendario estilo de juego de la serie Budokai Tenkaichi. Aprende a dominar a diversos personajes jugables, cada uno con sus habilidades, transformaciones y técnicas propias. Libera tu espíritu de lucha y pelea en escenarios que se derrumban y reaccionan a tu poder a medida que el combate se recrudece.', '2024-10-10', 2, 'https://images.g2a.com/300x400/1x1x1/dragon-ball-sparking-zero-deluxe-edition-pc-steam-key-emea-i10000506157047/51120bb921274747919bc3dd'),
-(5, 'Marvel\'s Spider-Man', 'En Marvel’s Spider-Man Remasterizado, la vida de Peter Parker se topa con la de Spider-Man en una historia original repleta de acción. Ponte en la piel de un Peter Parker veterano que ha pulido sus habilidades en la lucha contra el crimen y los villanos en la Nueva York de Marvel.', '2023-10-18', 1, 'https://images.g2a.com/300x400/1x1x1/marvels-spider-man-remastered-pc-steam-key-global-i10000302546004/7e4252006f11418bae232b83'),
-(6, 'Grand Theft Auto V', 'Grand Theft Auto V es un videojuego de acción-aventura de mundo abierto desarrollado por Rockstar North y distribuido por Rockstar Games. Este título revolucionario hizo su debut el 17 de septiembre de 2013 en las consolas Xbox 360 y PlayStation 3.', '2014-10-22', 1, 'https://images.g2a.com/300x400/1x1x1/grand-theft-auto-v-rockstar-key-global-i10000000788017/59e5efeb5bafe304c4426c47'),
-(7, 'God of War', 'God of War es un videojuego de acción-aventura hack and slash en tercera persona desarrollado por SCE Santa Monica Studio y publicado por Sony Interactive Entertainment. El juego se lanzó para PlayStation 4 en abril de 2018, con un puerto para Windows lanzado en enero de 2022.', '2019-10-03', 1, 'https://images.g2a.com/300x400/1x1x1/god-of-war-pc-steam-key-global-i10000152407005/98c4f59fc39f44aaa432445e'),
-(8, 'The Last of Us Parte 1', 'The Last of Us Part I es un videojuego de acción y aventura de 2022 desarrollado por Naughty Dog y publicado por Sony Interactive Entertainment. Un remake del juego de 2013 The Last of Us, presenta una jugabilidad revisada, que incluye combate y exploración mejorados, y opciones de accesibilidad ampliadas.', '2020-10-02', 4, 'https://images.g2a.com/300x400/1x1x1/the-last-of-us-part-i-pc-steam-key-global-i10000326425006/ef73efe282954a74ab9bb70f'),
-(9, 'Counter-Strike 2', 'Counter-Strike 2 es un videojuego de disparos táctico en primera persona multijugador de 2023 desarrollado y publicado por Valve. Es la quinta entrega principal de la serie Counter-Strike.', '2023-10-20', 5, 'https://images.g2a.com/300x400/1x1x1/counter-strike-2-prime-status-upgrade-pc-steam-account-global-i10000016291002/5e4e63f76c084a838f11d085');
+INSERT INTO `games` (`id`, `title`, `description`, `id_genre`, `image`) VALUES
+(2, 'Dragon Ball: Sparking Zero', 'DRAGON BALL: Sparking! ZERO lleva a un nuevo nivel el legendario estilo de juego de la serie Budokai Tenkaichi. Aprende a dominar a diversos personajes jugables, cada uno con sus habilidades, transformaciones y técnicas propias. Libera tu espíritu de lucha y pelea en escenarios que se derrumban y reaccionan a tu poder a medida que el combate se recrudece.', 2, 'https://images.g2a.com/300x400/1x1x1/dragon-ball-sparking-zero-deluxe-edition-pc-steam-key-emea-i10000506157047/51120bb921274747919bc3dd'),
+(13, 'Geometry Dash', 'Geometry Dash es un videojuego de plataformas y videojuego rítmico creado en 2013 por el desarrollador sueco Robert Topala, y posteriormente desarrollado por su empresa independiente RobTop Games.', 11, 'https://images.g2a.com/300x400/1x1x1/geometry-dash-steam-key-global-i10000018369004/60266d2f7e696c59b00b0fd2'),
+(14, 'Counter-Strike 2', 'Counter-Strike 2 es un videojuego de disparos táctico en primera persona multijugador de 2023 desarrollado y publicado por Valve. Es la quinta entrega principal de la serie Counter-Strike.', 12, 'https://images.g2a.com/300x400/1x1x1/counter-strike-2-prime-status-upgrade-pc-steam-account-global-i10000016291002/5e4e63f76c084a838f11d085'),
+(15, 'The Last of Us Parte 1', 'The Last of Us Part I es un videojuego de acción y aventura de 2022 desarrollado por Naughty Dog y publicado por Sony Interactive Entertainment. Un remake del juego de 2013 The Last of Us, presenta una jugabilidad revisada, que incluye combate y exploración mejorados, y opciones de accesibilidad ampliadas.', 8, 'https://images.g2a.com/300x400/1x1x1/the-last-of-us-part-i-pc-steam-key-global-i10000326425006/ef73efe282954a74ab9bb70f'),
+(16, 'Marvel\'s Spider-Man', 'Marvel\'s Spider-Man es un videojuego de acción-aventura de mundo abierto desarrollado por Insomniac Games y publicado por Sony Interactive Entertainment.', 13, 'https://images.g2a.com/300x400/1x1x1/marvels-spider-man-remastered-pc-steam-key-global-i10000302546004/7e4252006f11418bae232b83'),
+(17, 'God of War', 'God of War es un videojuego de acción-aventura hack and slash en tercera persona desarrollado por SCE Santa Monica Studio y publicado por Sony Interactive Entertainment. El juego se lanzó para PlayStation 4 en abril de 2018, con un puerto para Windows lanzado en enero de 2022.', 13, 'https://images.g2a.com/300x400/1x1x1/god-of-war-pc-steam-key-global-i10000152407005/98c4f59fc39f44aaa432445e');
 
 -- --------------------------------------------------------
 
 --
 -- Estructura de tabla para la tabla `genre`
 --
--- Creación: 15-10-2024 a las 20:41:05
+-- Creación: 20-10-2024 a las 00:12:04
+-- Última actualización: 20-10-2024 a las 01:12:08
 --
 
 CREATE TABLE `genre` (
@@ -78,17 +79,18 @@ CREATE TABLE `genre` (
 --
 
 INSERT INTO `genre` (`id_genre`, `genre_name`) VALUES
-(1, 'Accion'),
 (2, 'Arena fighter'),
-(4, 'Supervivencia'),
-(5, 'Tactical shooter');
+(8, 'Supervivencia'),
+(11, 'Ritmico'),
+(12, 'Tactital Shooter'),
+(13, 'Accion');
 
 -- --------------------------------------------------------
 
 --
 -- Estructura de tabla para la tabla `users`
 --
--- Creación: 15-10-2024 a las 20:44:39
+-- Creación: 20-10-2024 a las 00:12:04
 --
 
 CREATE TABLE `users` (
@@ -139,13 +141,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de la tabla `games`
 --
 ALTER TABLE `games`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT de la tabla `genre`
 --
 ALTER TABLE `genre`
-  MODIFY `id_genre` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_genre` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT de la tabla `users`
@@ -161,7 +163,7 @@ ALTER TABLE `users`
 -- Filtros para la tabla `games`
 --
 ALTER TABLE `games`
-  ADD CONSTRAINT `fk-id-genre` FOREIGN KEY (`id_genre`) REFERENCES `genre` (`id_genre`);
+  ADD CONSTRAINT `fk-id-genre` FOREIGN KEY (`id_genre`) REFERENCES `genre` (`id_genre`) ON DELETE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
