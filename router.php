@@ -3,6 +3,7 @@ require_once "app/controllers/games.controller.php";
 require_once "app/controllers/auth.controller.php";
 require_once "app/controllers/genres.controller.php";
 require_once "app/middleware/session.auth.middleware.php";
+require_once "app/middleware/verify.auth.middleware.php";
 require_once "libs/response.php";
 
 define('BASE_URL', '//'.$_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] . dirname($_SERVER['PHP_SELF']).'/');
@@ -52,45 +53,55 @@ switch ($params[0]) {
         break;
     case "showAddGame":
         sessionAuthMiddleware($res);
+        verifyAuthMiddleware($res);
         $controller = new GamesController($res);
         $controller->showAddGame();
         break;
     case "addGame":
+        verifyAuthMiddleware($res);
         $controller = new GamesController($res);
         $controller->addGame();
         break;
     case "deleteGame":
+        verifyAuthMiddleware($res);
         $controller = new GamesController($res);
         $controller->deleteGame($params[1]);
         break;
     case "editGame":
+        verifyAuthMiddleware($res);
         $controller = new GamesController($res);
         $controller->editGame($params[1]);
         break;
     case "showAddGenre":
         sessionAuthMiddleware($res);
+        verifyAuthMiddleware($res);
         $controller = new GenresController($res);
         $controller->showAddGenre();
         break;
     case "addGenre":
+        verifyAuthMiddleware($res);
         $controller = new GenresController($res);
         $controller->addGenre();
         break;
     case "deleteGenre":
+        verifyAuthMiddleware($res);
         $controller = new GamesController($res);
         $controller->deleteGenre($params[1]);
         break;
     case "editGenre":
+        verifyAuthMiddleware($res);
         $controller = new GenresController($res);
         $controller->editGenre($params[1]);
         break;
     case "showEditGame":
         sessionAuthMiddleware($res);
+        verifyAuthMiddleware($res);
         $controller = new GamesController($res);
         $controller->showEditGame($params[1]);
         break;
     case "showEditGenre":
         sessionAuthMiddleware($res);
+        verifyAuthMiddleware($res);
         $controller = new GenresController($res);
         $controller->showEditGenre($params[1]);
         break;
