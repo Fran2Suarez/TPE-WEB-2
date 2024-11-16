@@ -58,6 +58,7 @@ switch ($params[0]) {
         $controller->showAddGame();
         break;
     case "addGame":
+        sessionAuthMiddleware($res);
         verifyAuthMiddleware($res);
         $controller = new GamesController($res);
         $controller->addGame();
@@ -69,6 +70,7 @@ switch ($params[0]) {
         $controller->deleteGame($params[1]);
         break;
     case "editGame":
+        sessionAuthMiddleware($res);
         verifyAuthMiddleware($res);
         $controller = new GamesController($res);
         $controller->editGame($params[1]);
@@ -80,6 +82,7 @@ switch ($params[0]) {
         $controller->showAddGenre();
         break;
     case "addGenre":
+        sessionAuthMiddleware($res);
         verifyAuthMiddleware($res);
         $controller = new GenresController($res);
         $controller->addGenre();
@@ -91,6 +94,7 @@ switch ($params[0]) {
         $controller->deleteGenre($params[1]);
         break;
     case "editGenre":
+        sessionAuthMiddleware($res);
         verifyAuthMiddleware($res);
         $controller = new GenresController($res);
         $controller->editGenre($params[1]);
