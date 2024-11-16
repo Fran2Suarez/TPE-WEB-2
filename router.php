@@ -63,6 +63,7 @@ switch ($params[0]) {
         $controller->addGame();
         break;
     case "deleteGame":
+        sessionAuthMiddleware($res);
         verifyAuthMiddleware($res);
         $controller = new GamesController($res);
         $controller->deleteGame($params[1]);
@@ -84,6 +85,7 @@ switch ($params[0]) {
         $controller->addGenre();
         break;
     case "deleteGenre":
+        sessionAuthMiddleware($res);
         verifyAuthMiddleware($res);
         $controller = new GamesController($res);
         $controller->deleteGenre($params[1]);
