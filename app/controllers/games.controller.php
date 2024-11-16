@@ -62,7 +62,7 @@ class GamesController {
         $genre = $this->modelGenre->getGenres();
         $game = $this->model->getGameById($id);
         if (!$game) {
-            $this->view->showHome($games,$genre,'No existe el juego');
+            $this->view->showHome($games,$genre,'No existe el capitulo');
         }
 
         $this->model->deleteGame($id);
@@ -97,7 +97,7 @@ class GamesController {
         $games = $this->model->getGames();
         $genre = $this->modelGenre->getGenres();
         if (!$genre) {
-            $this->view->showHome($genre, $games,'No existe el juego');
+            $this->view->showHome($genre, $games,'No existe el capitulo');
         }
 
         $this->modelGenre->deleteGenre($id);
